@@ -9,13 +9,32 @@ func ready() -> void:
 	pass
 
 
+func player_movement(delta):
+	get_input()
+	if velocity[0]*velocity[0] > 1 or velocity[1] * velocity[1] > 0:
+		player_animation("move")
+
 # function for top down 8-way control from wiki: https://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED
+	
+	
+func player_animation(action: String) -> void:
+	var anim = $AnimatedSprite2D
+	if velocity[0] > 1:
+		anim.flip_h = false
+		anim.play("side_walk")
+	elif velocity[0] < 0:
+		anim.flip_h = true
+		anim.play("side_walk")
+	elif velocity[1] > 0:
+		anim.play("front_walk")
+	elif velocity[1] < 1:
+		anim.play("back_walk")
 
 func _physics_process(delta: float) -> void:
-	get_input()
+	player_movement(delta)
 	move_and_slide()
 	
 	#

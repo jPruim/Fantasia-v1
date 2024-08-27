@@ -423,10 +423,10 @@ script = ExtResource("1_waopq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 10
 sprite_frames = SubResource("SpriteFrames_viv2u")
-animation = &"death"
+animation = &"back_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 8.25)
+position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_mpc8u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
