@@ -1,6 +1,8 @@
 extends CharacterBody2D
 #
 const SPEED = 100.0
+var last_input = "right";
+
 #const JUMP_VELOCITY = -300.0
 #@onready var animated_sprite = $AnimatedSprite2D
 
@@ -8,11 +10,12 @@ const SPEED = 100.0
 func ready() -> void:
 	pass
 
-
 func player_movement(delta):
 	get_input()
 	if velocity[0]*velocity[0] > 1 or velocity[1] * velocity[1] > 0:
 		player_animation("move")
+	else: #idle
+		player_animation("idle")
 
 # function for top down 8-way control from wiki: https://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html
 func get_input():
@@ -22,16 +25,31 @@ func get_input():
 	
 func player_animation(action: String) -> void:
 	var anim = $AnimatedSprite2D
-	if velocity[0] > 1:
-		anim.flip_h = false
-		anim.play("side_walk")
-	elif velocity[0] < 0:
-		anim.flip_h = true
-		anim.play("side_walk")
-	elif velocity[1] > 0:
-		anim.play("front_walk")
-	elif velocity[1] < 1:
-		anim.play("back_walk")
+	print(velocity)
+	if action == "move":
+		if velocity[0] > 1:
+			last_input = "right"
+			anim.flip_h = false
+			anim.play("side_walk")
+		elif velocity[0] < 0:
+			anim.flip_h = true
+			last_input = "left"
+			anim.play("side_walk")
+		elif velocity[1] > 0:
+			last_input = "down"
+			anim.play("front_walk")
+		elif velocity[1] < 1:
+			last_input = "up"
+			anim.play("back_walk")
+		else:
+			print("idling: should not reach")
+	else: #idle animations
+		if (last_input == "left" or last_input == "right"):
+			anim.play("side_idle")
+		elif last_input == "up":
+			anim.play("back_idle")
+		else:
+			anim.play("front_idle")
 
 func _physics_process(delta: float) -> void:
 	player_movement(delta)
