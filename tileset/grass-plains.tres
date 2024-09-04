@@ -1,9 +1,13 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://53i06b0xkx2k"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://53i06b0xkx2k"]
 
 [ext_resource type="Texture2D" uid="uid://cics8phkp6glc" path="res://assets/Mystic Woods/objects/chest_01.png" id="1_2h0wf"]
+[ext_resource type="Texture2D" uid="uid://bwaonhhm7d7lc" path="res://assets/Mystic Woods/tilesets/water-sheet.png" id="1_7ppsf"]
 [ext_resource type="Texture2D" uid="uid://war0wg3tmvy0" path="res://assets/Mystic Woods/objects/chest_02.png" id="2_awbc5"]
 [ext_resource type="Texture2D" uid="uid://d1j64rmlab8o3" path="res://assets/Mystic Woods/objects/objects.png" id="3_cxu22"]
 [ext_resource type="Texture2D" uid="uid://dymrqlgga2j73" path="res://assets/Terrained tile set attempt/grass_and_dirt.png" id="4_a3nje"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4f3ot"]
+texture = ExtResource("1_7ppsf")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckss0"]
 texture = ExtResource("1_2h0wf")
@@ -22,24 +26,37 @@ texture = ExtResource("2_awbc5")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klpo8"]
 texture = ExtResource("3_cxu22")
 0:0/0 = 0
+0:0/0/z_index = 10
 5:0/0 = 0
+5:0/0/z_index = 10
 10:0/0 = 0
+10:0/0/z_index = 10
 11:0/0 = 0
+11:0/0/z_index = 10
 0:1/0 = 0
+0:1/0/z_index = 10
 11:2/0 = 0
+11:2/0/z_index = 10
 11:3/0 = 0
+11:3/0/z_index = 10
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
+0:5/0/z_index = 10
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
+6:7/0/z_index = 10
 8:6/size_in_atlas = Vector2i(2, 1)
 8:6/0 = 0
+8:6/0/z_index = 10
 8:7/size_in_atlas = Vector2i(2, 1)
 8:7/0 = 0
+8:7/0/z_index = 10
 8:8/size_in_atlas = Vector2i(2, 1)
 8:8/0 = 0
+8:8/0/z_index = 10
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
+10:7/0/z_index = 10
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atkbr"]
 texture = ExtResource("4_a3nje")
@@ -457,4 +474,5 @@ sources/2 = SubResource("TileSetAtlasSource_ckss0")
 sources/3 = SubResource("TileSetAtlasSource_5t8hp")
 sources/4 = SubResource("TileSetAtlasSource_klpo8")
 sources/6 = SubResource("TileSetAtlasSource_atkbr")
+sources/0 = SubResource("TileSetAtlasSource_4f3ot")
 tile_proxies/coords_level = [[0, Vector2i(0, 0)], [5, Vector2i(0, 0)], [0, Vector2i(0, 1)], [5, Vector2i(0, 1)], [0, Vector2i(0, 2)], [5, Vector2i(0, 2)], [0, Vector2i(0, 3)], [5, Vector2i(0, 3)], [0, Vector2i(0, 4)], [5, Vector2i(0, 4)], [0, Vector2i(0, 5)], [5, Vector2i(0, 5)], [0, Vector2i(0, 6)], [5, Vector2i(0, 6)], [0, Vector2i(0, 7)], [5, Vector2i(0, 7)], [0, Vector2i(1, 0)], [5, Vector2i(1, 0)], [0, Vector2i(1, 1)], [5, Vector2i(1, 1)], [0, Vector2i(1, 2)], [5, Vector2i(1, 2)], [0, Vector2i(1, 3)], [5, Vector2i(1, 3)], [0, Vector2i(1, 4)], [5, Vector2i(1, 4)], [0, Vector2i(1, 5)], [5, Vector2i(1, 5)], [0, Vector2i(1, 6)], [5, Vector2i(1, 6)], [0, Vector2i(1, 7)], [5, Vector2i(1, 7)], [0, Vector2i(2, 0)], [5, Vector2i(2, 0)], [0, Vector2i(2, 1)], [5, Vector2i(2, 1)], [0, Vector2i(2, 2)], [5, Vector2i(2, 2)], [0, Vector2i(2, 3)], [5, Vector2i(2, 3)], [0, Vector2i(2, 4)], [5, Vector2i(2, 4)], [0, Vector2i(2, 5)], [5, Vector2i(2, 5)], [0, Vector2i(2, 6)], [5, Vector2i(2, 6)], [0, Vector2i(2, 7)], [5, Vector2i(2, 7)], [0, Vector2i(3, 0)], [5, Vector2i(3, 0)], [0, Vector2i(3, 1)], [5, Vector2i(3, 1)], [0, Vector2i(3, 2)], [5, Vector2i(3, 2)], [0, Vector2i(3, 3)], [5, Vector2i(3, 3)], [0, Vector2i(3, 4)], [5, Vector2i(3, 4)], [0, Vector2i(3, 5)], [5, Vector2i(3, 5)], [0, Vector2i(3, 6)], [5, Vector2i(3, 6)], [0, Vector2i(3, 7)], [5, Vector2i(3, 7)], [0, Vector2i(4, 0)], [5, Vector2i(4, 0)], [0, Vector2i(4, 1)], [5, Vector2i(4, 1)], [0, Vector2i(4, 2)], [5, Vector2i(4, 2)], [0, Vector2i(4, 4)], [5, Vector2i(4, 4)], [0, Vector2i(4, 5)], [5, Vector2i(4, 5)], [0, Vector2i(4, 6)], [5, Vector2i(4, 6)], [0, Vector2i(5, 0)], [5, Vector2i(5, 0)], [0, Vector2i(5, 1)], [5, Vector2i(5, 1)], [0, Vector2i(5, 2)], [5, Vector2i(5, 2)], [0, Vector2i(5, 4)], [5, Vector2i(5, 4)], [0, Vector2i(5, 5)], [5, Vector2i(5, 5)], [0, Vector2i(5, 6)], [5, Vector2i(5, 6)], [1, Vector2i(0, 0)], [5, Vector2i(6, 0)]]

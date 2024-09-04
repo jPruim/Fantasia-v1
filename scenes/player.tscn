@@ -414,21 +414,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpc8u"]
-size = Vector2(12, 30.5)
+size = Vector2(12, 18.25)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(7, -25)
 script = ExtResource("1_waopq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 10
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_viv2u")
 animation = &"back_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 2)
+position = Vector2(1, 8.125)
 shape = SubResource("RectangleShape2D_mpc8u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
