@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dclvcb8842sv8"
+path="res://.godot/imported/Slinger Swagger (loop).mp3-843015d0b1b162c9d70a9df74d8ea66b.mp3str"
+
+[deps]
+
+source_file="res://assets/Package2/Music/Wild West Music - Harvey Carman/Wild West Music - Harvey Carman/MP3/Slinger Swagger (loop).mp3"
+dest_files=["res://.godot/imported/Slinger Swagger (loop).mp3-843015d0b1b162c9d70a9df74d8ea66b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

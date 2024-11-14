@@ -425,14 +425,13 @@ collision_mask = 13
 script = ExtResource("1_waopq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 10
-z_as_relative = false
 y_sort_enabled = true
 position = Vector2(-1, -19)
 sprite_frames = SubResource("SpriteFrames_viv2u")
 animation = &"back_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -10.875)
 shape = SubResource("RectangleShape2D_mpc8u")
 
@@ -444,6 +443,7 @@ position_smoothing_speed = 3.0
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HealthBar" type="ColorRect" parent="UI"]
+top_level = true
 z_index = 50
 z_as_relative = false
 anchors_preset = 2
@@ -454,6 +454,7 @@ offset_top = -537.0
 offset_right = -181.0
 offset_bottom = -527.0
 grow_vertical = 0
+scale = Vector2(1, 1.01099)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
